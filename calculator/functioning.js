@@ -9,18 +9,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (btntext === 'AC') {
                 screen.value = '';
-            }
+            } 
 
-            if (btn === 'x') {
-                screen.value = '*';
-            }
-
+            // else if (btn === '*')
             
-
             else if (btntext === 'CE') {
                 screen.value = screen.value.slice(0, -1);
             }
-
+            
+            else if (btntext === '=') {
+                try {
+                    screen.value = eval(screen.value); // Evaluate the expression
+                } catch (err) {
+                    screen.value = 'Error';
+                }
+            } 
+            
             else {
                 screen.value += btntext;
             }
