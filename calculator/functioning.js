@@ -9,9 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (btntext === 'AC') {
                 screen.value = '';
-            } 
-
-            // else if (btn === '*')
+            }
             
             else if (btntext === 'CE') {
                 screen.value = screen.value.slice(0, -1);
@@ -19,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             else if (btntext === '=') {
                 try {
-                    screen.value = eval(screen.value); // Evaluate the expression
+                    screen.value = eval(screen.value);
                 } catch (err) {
                     screen.value = 'Error';
                 }
@@ -30,4 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    function sin()
+    {
+        screen.value = Math.sin(screen.value);
+    }
 });
